@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4-grid</title>
+</head>
+<body>
+  <style>
+    .container{
+      display: grid;
+      margin: 10px;
+      gap: 10px;
+      grid-template-areas: 
+      "q q q"
+      "w w e"
+      "w w r"
+      "w w t"
+      ;
+    }
+    .container>div:nth-child(1){
+      background-color: yellow;
+      height: 40px;
+      grid-area: q;
+    }
+    .container>div:nth-child(2){
+      background-color: red;
+      height: 600px;
+      grid-area: w;
+    }
+    .container>div:nth-child(3){
+      background-color: greenyellow;
+      height: 150px;
+      grid-area: e;
+    }
+    .container>div:nth-child(4){
+      background-color: greenyellow;
+      height: 150px;
+      grid-area: r;
+    }
+    .container>div:nth-child(5){
+      background-color: greenyellow;
+      height: 150px;
+      grid-area: t;
+    }
+  
+    @media all and (min-width:320px) and (max-width:768px){
+      .container{
+      grid-template-areas: 
+      "q "
+      "w "
+      "e"
+      "r"
+      "t"
+      ;
+    }
+    }
+  
+    @media all and (min-width:769px) and (max-width:1024px){
+      .container{
+      grid-template-areas: 
+      "q q q"
+      "w w w"
+      "w w w"
+      "e r t"
+      ;
+    }
+    }
+  </style>
+  <div class="container">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+</html>

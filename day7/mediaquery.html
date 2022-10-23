@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Query</title>
+</head>
+<body>
+  
+  <style>
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightgreen;
+  }
+  .container>div{
+    background-color:rgb(248, 24, 24);
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  body {
+    background-color: rgb(249, 142, 80);
+  }
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  body {
+    background-color: rgb(144, 199, 238);
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  body {
+    background-color: rgb(245, 245, 83);
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  body {
+    background-color: rgb(244, 99, 147);
+  }
+}
+
+    /* @media all and (min-width:300px) and (max-width:1000px){
+    p{
+      background-color:green;
+      color:white;
+    }
+  }  */
+
+  .container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,100px);
+    grid-auto-rows: 100px;
+    gap: 10px;
+    
+  }
+  .container>div{
+    color:white;
+  }
+  .container>div:nth-child(1){
+    background-color: blue;
+  }
+  .container>div:nth-child(2){
+    background-color: rgb(255, 132, 0);
+  }
+  .container>div:nth-child(3){
+    background-color: rgb(68, 255, 0);
+  }
+  .container>div:nth-child(4){
+    background-color: rgb(255, 0, 204);
+  }
+  .container>div:nth-child(5){
+    background-color: rgb(255, 247, 0);
+  }
+  .container>div:nth-child(6){
+    background-color: rgb(0, 251, 255);
+  }
+  </style>
+  <p>I am Para</p>
+  <div class="container">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+</html>

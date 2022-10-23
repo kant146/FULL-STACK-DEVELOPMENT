@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+</head>
+<body>
+  <h1 id="display">Click on Login to continue</h1>
+  <button onClick="login()">Login</button>
+  <button onClick="logout()">Logout</button>
+ 
+</body>
+<script>
+  function login(){
+    document.getElementById("display").innerText="Login Successful"
+  }
+  function logout() {
+    document.getElementById("display").innerText="Logout Successful"
+}
+</script>
+</html>

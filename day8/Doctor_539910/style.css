@@ -1,0 +1,13 @@
+/* Write your styles here  */
+
+body {
+  background-color: red;
+}
+
+/* keep media queries at the bottom */
+/* Medium screens */
+@media all and (min-width: 451px) and (max-width: 750px) {
+}
+/* Small screens */
+@media all and (min-width: 100px) and (max-width: 450px) {
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button</title>
+</head>
+<body>
+
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .container{
+      margin: auto;
+margin-top:40vh;
+display: flex;
+flex-direction: row;
+flex-wrap:wrap;
+
+
+    }
+    .container>div{
+      margin: auto;
+      background-color: turquoise;
+      padding: 15px 30px;
+      border-radius: 10px;
+      color: white;
+      font-size: large;
+      margin-bottom: 2%;
+     
+      transition: all 0.3s;
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+    
+    
+    }
+    .container>div:hover{
+      scale:1.5;
+    }
+    .container>div:nth-child(1){
+      background-color: #007BFF;
+    }
+    .container>div:nth-child(2){
+      background-color: #6C757D;
+    }
+
+    .container>div:nth-child(3){
+      background-color: #28A745;
+    }
+    .container>div:nth-child(4){
+      background-color: #DC3545;
+    }
+    .container>div:nth-child(5){
+      background-color: #FFC107;
+      color:black;
+    }
+    .container>div:nth-child(6){
+      background-color: #17A2B8;
+    }
+    .container>div:nth-child(7){
+      background-color: white;
+      color:black;
+    }
+    .container>div:nth-child(8){
+      background-color: #343A40;
+    }
+    .container>div:nth-child(9){
+      background-color: white;
+      color:#007BFF;
+    }
+
+  </style>
+  <div class="container">
+    <div>Primary</div>
+    <div>Secondary</div>
+    <div>Success</div>
+    <div>Danger</div>
+    <div>Warning</div>
+    <div>Info</div>
+    <div>Light</div>
+    <div>Dark</div>
+    <div>link</div>
+  </div>
+
+  
+</body>
+</html>

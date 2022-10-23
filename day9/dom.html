@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dom</title>
+</head>
+<body>
+  <style>
+div>div{
+font-size: 3rem;
+}
+  </style>
+
+  <div>
+    <div>
+      <h1 id="head1">Hello sanu</h1>
+      <p id="para">kya kha raha hai</p>
+      <div id="container"><i>I Am Pro Bro</i></div>
+    </div>
+
+    
+    <div class="px-4 py-14">
+      <div class="lg:max-w-[1440px] md:max-w-[744px] max-w-[375px] mx-auto">
+        <div class="max-w-[340px] mx-auto bg-white px-6 py-4">
+          <img
+            src="https://tuk-cdn.s3.amazonaws.com/can-uploader/round.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  
+  </div>
+</body>
+</html>
+<script>
+  var x= document.getElementById("head1").innerText;
+  console.log(x);
+
+  var y= document.getElementById("para").innerText;
+  console.log(y);
+
+  var z= document.getElementById("container").innerText;
+  console.log(z);
+
+  var a= document.getElementById("container").innerHTML;
+  console.log(a);
+
+</script>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kevin Grid</title>
+
+
+</head>
+<body>
+  
+<style>
+  *{
+    box-sizing:border-box;
+  }
+  body{
+    margin:0;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 
+    1.5em 1fr 1.5em ;
+    grid-template-areas: 
+    "header header header"
+    "... main-content ..."
+    "...... sidebar ......"
+    "footer footer footer"
+      ;
+  }
+
+  @media only screen  and (min-width: 860px){
+    body{
+      grid-template-columns: 1.5em minmax(400px, 650px) minmax(200px,350px)1.5em;
+      grid-template-areas: 
+    "header header header header"
+    "... main-content sidebar ..."
+    "footer footer footer footer"
+    }
+    }
+
+  .header,.main-content,.sidebar,.footer{
+    padding:2em;
+  }
+
+    .header{background: skyblue}
+    .main-content{ background:orangered}
+    .sidebar{background:deepskyblue}
+    .footer{background:purple}
+
+    .header{
+      grid-area: header;
+    }
+    .main-content{
+      grid-area: main-content;
+    }
+    .sidebar {
+      grid-area: sidebar;
+    }
+    .footer{
+      grid-area: footer;
+    }
+
+</style>
+
+    <div class="header"></div>
+    <div class="main-content"></div>
+    <div class="sidebar"></div>
+    <div class="footer"></div>
+</body>
+</html>

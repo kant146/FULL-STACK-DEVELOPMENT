@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media-Grid</title>
+</head>
+<body>
+
+  <style>
+    body{
+      margin: 0;
+      padding: 0;
+    }
+    .container{
+      display: grid;
+      grid-template-areas:
+        "q q q q"
+        "r i c h" ;
+        gap: 20px;
+        padding: 40px;
+     
+    }
+    .container>div~div{
+        height:300px;
+      }
+    .container>div:nth-child(1){
+      background-color: red;
+      grid-area: q;
+       height: 60px;
+    }
+    .container>div:nth-child(2){
+      background-color: green;
+      grid-area: r;
+         
+    }
+    .container>div:nth-child(3){
+      background-color: blue;
+      grid-area: i;
+          
+    }
+    .container>div:nth-child(4){
+      background-color: orange;
+      grid-area: c;
+        
+    }
+    .container>div:nth-child(5){
+      background-color: purple;
+      grid-area: h;
+         
+    }
+    @media all and (min-width:320px) and (max-width:768px){
+        .container{
+            grid-template-areas: 
+            "q"
+            "r"
+            "i"
+            "c"
+            "h";
+        }
+      }
+      /* medium screen */
+      @media all and (min-width:769px) and (max-width:1024px){
+         .container{
+            grid-template-areas:
+            "q q"
+            "r i"
+            "c h"
+            ;
+         }
+      }
+  </style>
+
+  <div class="container">
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>E</div>
+    <div>f</div>
+  </div>
+  
+</body>
+</html>

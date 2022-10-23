@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>left-Right-Box</title>
+</head>
+<body>
+  <style>
+       body{
+      margin: 0;
+      padding: 0;
+    }
+    .container{
+      margin: 10px;
+      display: grid;
+      /* grid-template-columns: repeat(2,2.1fr);
+      grid-template-areas: repeat(2,2.1fr); */
+      gap:20px;
+      padding: 20px;
+      transition: all 0.3s;
+      grid-template-areas: 
+            "q1 q1"
+            "w2 e3"
+            ;
+    }
+    .container>div~div{
+        height:100px;
+      }
+    @media all and (min-width:320px) and (max-width:768px){
+      .container{
+            grid-template-areas: 
+            "q1"
+            "w2"
+            "e3"
+            ;
+        }
+    }
+    @media all and (min-width:769px) and (max-width:1024px){
+      .container{
+            grid-template-areas: 
+            "q1 q1"
+            "w2 e3"
+            ;
+        }
+    }
+    .container>div:nth-child(1){
+      background-color: yellow;
+      height: 60px;
+      grid-area:q1;
+    }
+    .container>div:nth-child(2){
+      background-color: red;
+      height: 200px;
+      grid-area:w2;
+    }
+    .container>div:nth-child(3){
+      background-color: greenyellow;
+      height: 200px;
+      grid-area:e3;
+    }
+  </style>
+  <div class="container">
+    <div>nav</div>
+    <div>left</div>
+    <div>right</div>
+  </div>
+</body>
+</html>

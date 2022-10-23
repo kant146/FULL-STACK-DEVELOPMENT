@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queries</title>
+    <style>
+      .contra{
+        display: grid;
+        grid-template-areas: 
+        "q q q q"
+        "r i c h" ;
+        gap: 20px;
+        padding: 40px;
+      }
+      /* small screen */
+      @media all and (min-width:320px) and (max-width:768px){
+        .contra{
+            grid-template-areas: 
+            "q"
+            "r"
+            "i"
+            "c"
+            "h";
+        }
+      }
+      /* medium screen */
+      @media all and (min-width:769px) and (max-width:1024px){
+         .contra{
+            grid-template-areas:
+            "q q"
+            "r i"
+            "c h"
+            ;
+         }
+      }
+      .contra>div~div{
+        height:300px;
+      }
+        
+      
+      .contra>div:nth-child(1){
+          background-color: yellow;
+          grid-area: q;
+          height: 60px;
+      }
+      .contra>div:nth-child(2){
+          background-color: red;
+          grid-area: r;
+         
+      }
+      .contra>div:nth-child(3){
+          background-color: green;
+          grid-area:i;
+      }
+      .contra>div:nth-child(4){
+          background-color: blue;
+          grid-area: c;
+      }
+      .contra>div:nth-child(5){
+          background-color: grey;
+          grid-area: h;
+      }
+    </style>
+</head>
+<body>
+    <div class="contra">
+        <div>Navigation</div>
+        <div>Box 1</div>
+        <div>Box 2</div>
+        <div>Box 3</div>
+        <div>Box 4</div>
+    </div>
+</body>
+</html>

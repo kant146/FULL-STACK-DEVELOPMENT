@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIN & MAX LEADERBOARD</title>
+    <style>
+        *{
+            text-align: center;
+            margin:0;
+            padding: 0;
+
+        }
+       .rich{
+        margin:  auto;
+        
+        padding:20px 45px;
+        border:1px solid black;
+        background-color: red;
+        font-weight: bolder;
+        font-size: 30px;
+        
+       }
+       .rack{
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+        margin: auto;
+       }
+       .rack>div{
+       
+        text-align: center;
+       }
+       .richer{
+        margin:  auto;
+        padding:20px 30px;
+        border:1px solid black;
+        background-color: green;
+        font-size: 30px;
+        font-weight: bolder;
+       }
+       #display{
+        width: 20%;
+        margin: auto;
+        padding:25px 30px;
+        border:2px solid black;
+        background-color: grey;
+        font-size: 30px;
+        font-weight: bolder;
+       }
+       .keyboard{
+        width:25%;
+        margin:10px auto;
+        
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(4,60px);
+        align-items: center;
+        gap:30px;
+        padding:10px;
+       }
+       .keyboard>div{
+        margin: auto;
+        padding:20px 30px;
+        border:1px solid black;
+       }
+       #none{
+          border: 0px;
+          background-color: none;
+        }
+        #non{
+          border: 0px;
+          background-color: none;
+        }
+        .green{
+            background-color: #668100;
+            font-weight: bolder;
+            font-size: 25px;
+        }
+        .orange{
+            background-color: #FF6600;
+            font-weight: bolder;
+            font-size: 25px;
+        }
+        .violet{
+            border: 1px solid black;
+            background-color: #810065;
+            color: white;
+            font-weight: bolder;
+            font-size: 25px;
+        }
+        .enter{
+            width: 24%;
+            margin:1% auto;
+            border: 2px solid black;
+            padding:1% ;
+            color: white;
+            background-color: black;
+            font-weight: bolder;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="rack">
+        <div>
+    <div class="rich">43</div>
+    <h1>MIN</h1>
+     </div>
+     
+     <div>
+    <div class="richer">2019</div>
+    <h1>Max</h1>
+     </div>
+    </div>
+         <h1>Score</h1>
+        <div id="display">#</div>
+        <div class="keyboard">
+            <div class="green">1</div>
+            <div class="orange">2</div>
+            <div class="green">3</div>
+            <div  class="orange">4</div>
+            <div  class="orange">5</div>
+            <div  class="orange">6</div>
+            <div class="green">7</div>
+            <div  class="orange">8</div>
+            <div class="green">9</div>
+            <div id="none"></div>
+            <div class="violet">0</div>
+            <div id="non"></div>
+        </div>
+        <div class="enter">ENTER</div>
+        </body>
+    
+</body>
+</html>
+<script>
+     var q= document.querySelectorAll(".keyboard")
+     for(let el of q){
+        el.addEventListener("click",myFUN);
+     }
+     var p= document.querySelectorAll(".enter")
+     for(let me of p){
+        me.addEventListener("click",henter);
+     }
+     
+     var w=document.querySelector(".rich").innerText;
+     var i=document.querySelector(".richer").innerText;
+     var m=Number(w);
+     var bag="";
+     var s,z;
+     function myFUN(event){
+         var t= event.target.innerText;
+        
+         bag+=t;
+        z=  document.querySelector("#display").innerText=bag;
+        s=Number(z);
+
+       console.log(typeof(s))
+       
+     }
+     function henter(event){
+    // var x=event.target.innerText;
+        if(s < m){
+            document.querySelector(".rich").innerText=s;
+         }
+         else if(s>Number(i))
+         document.querySelector(".richer").innerText=s;
+     }
+</script>
