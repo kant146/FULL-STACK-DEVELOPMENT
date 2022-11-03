@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BACKGROUND-CHANGER</title>
+</head>
+<body>
+    <p>Resize the browser window to fire the <code>resize</code> event.</p>
+    <p>Window height: <span id="height"></span></p>
+    <p>Window width: <span id="width"></span></p>    
+    
+</body>
+</html>
+<script>
+    document.querySelector("body").addEventListener("resize",reportWindowSize)
+
+    // var a=Math.floor(Math.random() * 256) ;
+    // var b=Math.floor(Math.random() * 256) ;
+    // var c=Math.floor(Math.random() * 256) ;
+    // var ch='rgb(${a}, ${b}, ${c})';
+    // console.log( document.querySelector("body").style.backgroundcolor=ch)
+  
+    // function myMoney(){
+    //     document.querySelector("html").style.backgroundcolor=ch;
+    //     console.log( document.querySelector("body").style.background=ch)
+    // }
+   
+function reportWindowSize() {
+  
+var a=Math.floor(Math.random() * 256) ;
+    var b=Math.floor(Math.random() * 256) ;
+    var c=Math.floor(Math.random() * 256) ;
+    var ch=`rgb(${a}, ${b}, ${c})`;
+    
+    document.querySelector("body").style.background=ch;
+  console.log(ch)
+}
+
+window.onresize = reportWindowSize;
+
+</script>

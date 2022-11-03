@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>otp</title>
+</head>
+<body>
+  <input type="number" name="" id="otp">
+  <button onclick="otp()">Submit</button>
+  <h3 id="sol"></h3>
+</body>
+<script>
+function otp(){
+  let ot=document.querySelector("input").value;
+  let promise= new Promise ((resolve,reject)=>{
+    if(ot=="1234"){
+      resolve("Correct OTP")
+    }
+    else{
+      reject("Wrong OTP")
+    }
+  })
+  console.log(promise)
+}
+
+  promise.then((fromresolve)=>console.log(fromresolve))
+  .catch((fromreject)=>console.log(fromreject));
+  
+console.log(promise)
+
+  // function onClick(){
+  //   let x=promise
+  // document.querySelector("#sol").innerText=x
+  // }
+</script>
+</html>

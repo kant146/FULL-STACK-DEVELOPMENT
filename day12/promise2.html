@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>promise</title>
+</head>
+<body>
+  <style>
+    #rich{
+      display: inline;
+    }
+    #promise_details{
+      display: inline;
+    }
+  </style>
+  <h1 id="rich">Answer : </h1>
+  <h3 id="promise_details"> </h3>
+  <script>
+    var x=55;
+    let promise = new Promise((resolve,reject)=>{
+    if(x%2==0){
+      resolve("Even number")
+    }else{
+      reject("not even number")
+    }
+  })
+
+  
+  //  promise.then((fromresolve)=>console.log(fromsolve))
+  // .catch((fromreject)=>console.log(fromreject));
+  document.querySelector("#promise_details").innerText=" It's Done"
+  document.querySelector("#rich").style.display="inline"
+
+  </script>
+</body>
+</html>
