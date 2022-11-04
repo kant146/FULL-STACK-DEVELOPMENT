@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timer</title>
+</head>
+<body>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      border-radius: 8px;
+      font-size: 30px;
+      transition: all 0.3s;
+    
+    }
+    body{
+      background-color: #202124;
+    }
+   div{
+      margin-bottom: 55px;
+      padding-bottom: 100px;
+    }
+    div{
+      background-color: #202124;
+      margin: auto;
+      text-align: center;
+      margin-top: 30vh;
+    }
+    h1{
+      display: inline;
+      color: white;
+      font-size: 100px;
+      padding-left: 20px;
+      
+    }
+    h2{
+      display: inline;
+      color: white;
+      font-size:50px;
+      padding: 10px;
+      
+    }
+    h3{
+      display: inline;
+      color: white;
+      font-size:20px;
+      padding: 10px;
+    }
+    input{
+      width: 64px;
+      height: 50px;
+      background-color: #c6d7f4;
+      color: white;
+
+    }
+    input:focus{
+      background-color: #8AB4F8;
+     
+    }
+    button{
+      width: 100px;
+      height: 40px;
+      font-size: 25px;
+      border-radius: 8px;
+      border: 3px inset rgb(183, 188, 183);
+      box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+      
+    }
+    #start{
+      background: #8AB4F8;
+    }
+    #start:hover{
+      background: #5995f4;
+      color: white;
+      border: 3px outset #8AB4F8;
+    }
+    #reset{
+      background: #f88a8a;
+    }
+    #reset:hover{
+      background: #ff7575;
+      color: white;
+      transition: all 0.3s;
+      border: 3px outset #f88a8a;
+    }
+
+
+  </style>
+  <div >
+ <div >
+     <h1  id="Hours">00</h1>
+     <h2>hr</h2>
+     <h1  id="Minutes">00</h1>
+     <h2>min</h2>
+     <h2  id="Second">00</h2>
+     <h2>sec</h2>
+ </div>
+    <input type="number" maxlength="3" id="hour">
+    <h3>hr</h3>
+    <input type="number" maxlength="3" id="minutes">
+    <h3>min</h3>
+    <input type="number" maxlength="3" id="second">
+    <h3>sec</h3>
+    <button onclick="onClick()"  id="start">Start</button>
+    <button id="reset">Reset</button>
+
+  </div>
+
+</body>
+<script>
+  document.querySelector("#start").addEventListener("onclick",onClick);
+  function onClick(event) {
+    event.preventDefault();
+    
+    let h=document.getElementById("hour").value;
+    let m=document.getElementById("minutes").value;
+    let s=document.getElementById("second").value;
+
+    document.getElementById("Hour").innerText=h;
+    document.getElementById("Minutes").innerText=m;
+    document.getElementById("Second").innerText=s;
+
+
+  }
+</script>
+</html>

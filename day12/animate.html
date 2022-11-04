@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animate</title>
+</head>
+<body>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Megrim&family=Merienda+One&family=Nabla&family=Noto+Sans+Bengali:wght@400;600;700&family=Poppins:wght@400;500;600;700;800;900&family=Qwigley&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,900&family=Ubuntu+Mono:wght@400;700&display=swap');
+    *{
+      transition: all 0.9s;
+      color: #A1D55E;
+      font-size: 2.2rem;
+      font-family: 'Merienda One', cursive;
+      
+ 
+
+    }
+    body{
+      background-color: #cef48c;
+    }
+
+    img{
+      /* border-radius: 250px; */
+      width:550px;
+      margin-top: 12%;
+      
+      
+    }
+    .container{
+      margin: auto;
+      text-align: center;
+      margin-top: 5vh;
+      margin-left: 38%;
+      margin-bottom: 20px;
+
+    }
+    .circle{
+      background: #A1D55E;
+      border-radius: 50%;
+      width:590px;
+      height: 590px;
+      box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    }
+   
+  </style>
+
+  <div class="container">
+    <div class="circle">
+      <img id="test"  src="./closeup-cheerful-friendly-asian-outgoing-girl-having-fun-pointing-turn-left-amused-lively-talking-di55.png">
+    </div>
+   
+  </div>
+  
+</body>
+<script>
+   function test(){
+      document.body.append(' Hello,Your Favourite Brand Is Here. ')
+      for(let i=0; i<10000;i++){
+        console.log("I am late")
+      }
+      document.getElementById("test").style.margin="9% 0%";
+      document.getElementById("test").style.width="450px";
+      document.getElementById("test").style.borderRadius="50%";
+      document.querySelector(".circle").style.width="490px"
+      document.querySelector(".circle").style.height="490px"
+      document.querySelector(".circle").style.boxShadow="box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;"
+    }
+    // test()
+
+    // setTimeout(test,3000)
+    setInterval(test,3000)
+</script>
+</html>
